@@ -1,0 +1,8 @@
+<h1>todo list</h1>
+
+<input type="text" [(ngModel)]="todoText" value="{{todoText}}">
+<button (click)="addTodo()">submit</button>
+
+<div *ngFor="let todo of todoService.getTodos()">
+    <app-todo-item [todo]="todo"></app-todo-item>
+</div>
